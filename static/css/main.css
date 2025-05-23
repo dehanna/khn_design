@@ -87,8 +87,9 @@
     width:100%;
     height:100vh;
     position: relative;
-    background-color:#fdfaf6;
+    background-color:#F0EFED;
 }
+
 
 .secMain_TxtBox{
     width:90%;
@@ -96,14 +97,26 @@
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    color:#1e2cc1;
+    
+    
 }
 
 .TxtBox_Tit{
+    color:#1e2cc1;
+    text-align: center;
+    font-size:36px;
+    font-weight:600;
+    line-height: 142%;
+    text-align: center;
+}
+
+
+.TxtBox_TitEng{
     font-family: 'afterglow',"Castoro", serif;
-    font-size:48px;
+    font-size:24px;
+    font-weight:normal;
     line-height: 120%;
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 
 .TxtBox_SubTit{
@@ -114,7 +127,6 @@
 }
 
 .TxtBox_Tit span{
-    font-style:italic;
     position: relative;
 }
 
@@ -124,9 +136,9 @@
     height:4px;
     background:#1e2cc1;
     position:absolute;
-    bottom:5px;
+    bottom:0px;
     left:0;
-    animation:portBar 0.4s linear 1s forwards;
+    animation:portBar 0.4s linear 1.2s forwards;
 }
 
 .secMain_Arrow{
@@ -149,25 +161,22 @@
     background-image:url(../img/main_arrowBlack.png);
 }
 
-.secMain_Arrow img{
-    width:100%;
-    height:auto;
-    object-fit: cover;
-}
-
-
 /* seection01 main 800 */
 @media (min-width: 800px) {
     .secMain_TxtBox{
         top:45%;
     }
     .TxtBox_Tit{
-        font-size:80px;
+        font-size:60px;
+    }
+
+    .TxtBox_TitEng{
+        font-size:32px;
     }
 }
 
-/* seection01 main 1200 */
-@media (min-width: 1200px) {
+/* seection01 main 1300 */
+@media (min-width: 1300px) {
     /* .secMain{
         display:flex;
         align-items: center;
@@ -202,8 +211,10 @@
     } */
 
     .TxtBox_Tit{
-        margin-bottom:20px;
-        font-size:140px;
+        font-size:80px;
+    }
+    .TxtBox_TitEng{
+        font-size:40px;
     }
 
     .TxtBox_SubTit{
@@ -212,12 +223,12 @@
     }
 
     .TxtBox_Tit span em{
-        height:8px;
+        height:6px;
     }
 
     .secMain_Arrow{
-        width:110px;
-        height:200px;
+        width:100px;
+        height:181px;
     }
 }
 
@@ -227,14 +238,13 @@
 .secIntro{
     width:100%;
     padding:80px 30px 80px;
-    background-color:#f5f3ef;
+    background-color:#F7F7F7;
 }
 
 .secIntro_tit{
     font-size: 7.2vw;
     font-weight:600;
     line-height:140%;
-    letter-spacing: -1px;
 }
 
 .secIntro_subTit{
@@ -267,42 +277,36 @@
 
     .secIntro_tit{
         font-size: 3.2vw;
-        width:42%;
+        width:46%;
     }
 
     .secIntro_subTit{
-        width: 58%;
+        width: 54%;
         margin-top:0;
     }
 
-    .secIntro_subTit p{
-        margin-bottom:50px;
-    }
+
 }
 
-/* seection02 intro 1200 */
-@media (min-width: 1200px) {
+/* seection02 intro 1300 */
+@media (min-width: 1300px) {
     .secIntro{
-        padding:200px 0 60px;
+        padding:160px 0 120px;
     }
 
     .secIntroInner{
-        max-width:1250px;
+        max-width:1300px;
     }
 
     .secIntro_tit{
-        font-size:48px;
+        font-size:46px;
     }
 
     .secIntro_subTit{
-        font-size:23px;
+        font-size:22px;
         line-height:160%;
-        letter-spacing: 0px;
     }
 
-    .secIntro_subTit p{
-        margin-bottom:50px;
-    }
 }
 
 
@@ -312,7 +316,7 @@
 .secInfo{
     width:100%;
     padding:80px 30px;
-    background-color:#f5f3ef;
+    background-color:#F0EFED;
 }
 
 .secInfo_LB{
@@ -328,7 +332,7 @@
 }
 
 .secInfo_RB > div{
-    border-top:1px solid #222;
+    border-top:1px solid #444;
     padding-top:30px;
     margin-top:30px;
 }
@@ -632,6 +636,20 @@
     }
 }
 
+
+
+
+/* 자바스크립트 - 이벤트 구현용 */
+.fade_item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade_item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
